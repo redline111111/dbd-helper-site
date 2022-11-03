@@ -1,0 +1,4 @@
+.wrapper{
+    background: #282828;
+    min-height: calc(100vh - 50px);
+}

@@ -1,0 +1,82 @@
+.add-post{
+    background: #282828;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.ui-form {
+    width: 400px;
+    padding: 40px 30px 30px;
+    margin: 50px auto 30px;
+    background: rgb(152, 152, 152);
+    display: flex;
+    flex-direction: column;
+ }
+ .ui-form h3 {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 60px;
+    text-align: center;
+    color: #003777;
+    font-size: 30px;
+    font-weight: normal;
+ }
+
+ .ui-form p {
+    margin: 0;
+    padding-top: 10px;
+ }
+
+.dropbtn {
+    background-color: #003777;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.dropdown__title{
+    margin-bottom: 12px;
+}
+.dropbtn option{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropbtn:hover{background-color: #0257b8;}
+.ui-form__submit{
+    width: 40%;
+    padding: 0;
+    line-height: 42px;
+    background: #003777;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.ui-form__buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.solo{
+    width: 100%;
+}
+.none{
+    display: none;
+}
+.ui-form__description{
+    height: 100px;
+    font-size: 18px;
+}
