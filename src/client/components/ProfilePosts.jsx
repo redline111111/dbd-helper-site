@@ -15,7 +15,7 @@ export const ProfilePosts = ({
             <div className={style.blogCard}>
                 <div className={style.meta}>
                 <div className={style.photo}>
-                    <img src={`http://localhost:4444/uploads/${character}.png`} alt={`${character}`} />
+                    <img src={`http://45.147.176.68:80/uploads/${character}.png`} alt={`${character}`} />
                 </div>
                 <ul className={style.details}>
                     <li className={style.date}>Дата создания: {<Moment format="YYYY/MM/DD" date={createdAt}/>}</li>

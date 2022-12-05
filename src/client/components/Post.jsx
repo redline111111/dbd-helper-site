@@ -17,7 +17,7 @@ export const Post = ({
 
                     <div className="post__block">
                         <div className="post-card">
-                            <img className="post-card__image" src={`http://localhost:80/uploads/${character}.png`} alt="trapper" />
+                            <img className="post-card__image" src={`http://45.147.176.68:80/uploads/${character}.png`} alt="trapper" />
                             <div className="post-card__character-name">{character}</div>
                             <div className="post-card__unit-description">{description}</div>
                         </div>
@@ -36,7 +36,7 @@ export const Post = ({
                         <div className="post-perks">
                             <div className="post-perks__icons">
                                 {perks.map((item, index) => {
-                                    return <img key={index} src={`http://localhost:4444/uploads/perks/${item}.png`} alt={character} />
+                                    return <img key={index} src={`http://45.147.176.68:80/uploads/perks/${item}.png`} alt={character} />
                                 })}
                             </div>
                             <div className="post-perks__info">
