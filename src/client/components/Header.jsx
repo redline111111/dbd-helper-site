@@ -1,13 +1,12 @@
-import { Login } from "../pages/Login";
 import "./components.css";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectIsAuth, logout } from "../redux/slices/auth.js";
+import { selectIsAuth, logout, selectData } from "../redux/slices/auth.js";
 
 export const Header = () => {
     const isAuth = useSelector(selectIsAuth);
     const dispatch = useDispatch();
-
+    const user = useSelector(selectData);
     const onClickLogout = () => {
         if(window.confirm('Вы действительно хотите выйти?')){
             dispatch(logout());
@@ -32,7 +31,7 @@ export const Header = () => {
              </>
              ) : (
             <>
-            <Link to="/Profile">
+            <Link to={`/Profile/${user.login}`}>
                 <button className="header__login">Профиль</button> 
             </Link>
              <button className="header__login" onClick = {onClickLogout}>Выход</button> 

@@ -15,7 +15,6 @@ export const AddPost = () => {
     const [step, setStep] = useState(0);
     const build = useSelector((state) => state.build.build);
     const dispatch = useDispatch();
-
     const handleStepPrev = () =>{
         const nextStep = step - 1;
         setStep(nextStep);
@@ -42,12 +41,10 @@ export const AddPost = () => {
         try {
             event.preventDefault();
             if(checkForm()){
-                const {data} = await axios.post('/posts', build);
-
-                const id = data._id;
+                await axios.post('/posts', build);
                 
                 dispatch(clear);
-                navigate(`/FullPost/${id}`);
+                navigate(`/FullPost/${build.title}`);
             }; 
         } catch (error) {
             console.warn('Ошибка при создании статьи');

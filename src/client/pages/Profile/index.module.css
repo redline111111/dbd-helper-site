@@ -2,3 +2,223 @@
     background: #282828;
     min-height: calc(100vh - 50px);
 }
+.profileCards{
+    display: flex;
+    padding: 100px 200px;
+}
+.profileCards img{
+    width: 350px;
+    height: 250px;
+    border: #aaaaaa solid 1px;
+}
+.profileInfo{
+    margin-right:100px;
+}
+.nickname{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+.info{
+    max-width: 350px;
+    min-height: 150px;
+    background: rgb(121, 121, 121);
+    border: #060606 solid 2px;
+    padding: 15px;
+}
+.statistic{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.historyBlock{
+    background-color: rgb(121, 121, 121);
+    width: 680px;
+    padding: 20px;
+    height: 440px;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+.historyText{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.cardsBlock{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.blogCard {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.6%;
+    background: #fff;
+    line-height: 1.2;
+    font-family: sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+    height: 160px;
+    
+  }
+  .blogCard .photo img {
+    background-position:center center;
+    width: 260px;
+    height: 200px;
+  }
+  .blogCard:hover .photo {
+    transform: scale(1.3) rotate(3deg);
+  }
+
+  .blogCard .meta {
+    position: relative;
+    z-index: 0;
+    height: 160px;
+    
+  }
+
+  .blogCard .details,
+  .blogCard .details ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+  }
+  .blogCard .details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    transition: left 0.2s;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .blogCard .details a {
+    -webkit-text-decoration: dotted underline;
+            text-decoration: dotted underline;
+  }
+  .blogCard .details ul li {
+    display: inline-block;
+  }
+  .blogCard .details .author:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "";
+  }
+  .blogCard .details .date:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "";
+  }
+  .blogCard .details .tags ul:before {
+    font-family: FontAwesome;
+    content: "";
+    margin-right: 10px;
+  }
+  .blogCard .details .tags li {
+    margin-right: 2px;
+  }
+  .blogCard .details .tags li:first-child {
+    margin-left: -4px;
+  }
+  .blogCard .description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .blogCard .description h1,
+  .blogCard .description h2 {
+    font-family: Poppins, sans-serif;
+  }
+  .blogCard .description h1 {
+    line-height: 1;
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  .blogCard .description h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-top: 5px;
+  }
+  .blogCard .description .read-more {
+    text-align: right;
+  }
+  .blogCard .description .read-more{
+    color: #5ad67d;
+    display: inline-block;
+    position: relative;
+  }
+  .blogCard .description .read-more a:after {
+    content: "";
+    font-family: FontAwesome;
+    margin-left: -10px;
+    opacity: 0;
+    vertical-align: middle;
+    transition: margin 0.3s, opacity 0.3s;
+  }
+  .blogCard .description .read-more a:hover:after {
+    margin-left: 5px;
+    opacity: 1;
+  }
+  .blogCard p {
+    position: relative;
+    margin: 1rem 0 0;
+  }
+  .blogCard p:first-of-type {
+    margin-top: 1.25rem;
+  }
+  .blogCard p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background: #5ad67d;
+    width: 35px;
+    top: -0.75rem;
+    border-radius: 3px;
+  }
+  .blogCard:hover .details {
+    left: 0%;
+  }
+  @media (min-width: 640px) {
+    .blogCard {
+      flex-direction: row;
+      max-width: 700px;
+    }
+    .blogCard .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+    .blogCard .description {
+      flex-basis: 60%;
+    }
+    .blogCard .description:before {
+      transform: skewX(-3deg);
+      content: "";
+      background: #fff;
+      width: 30px;
+      position: absolute;
+      left: -10px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .blogCard.alt {
+      flex-direction: row-reverse;
+    }
+    .blogCard.alt .description:before {
+      left: inherit;
+      right: -10px;
+      transform: skew(3deg);
+    }
+    .blogCard.alt .details {
+      padding-left: 25px;
+    }
+  }
