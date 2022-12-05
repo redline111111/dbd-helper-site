@@ -41,10 +41,9 @@ export const AddPost = () => {
         try {
             event.preventDefault();
             if(checkForm()){
-                await axios.post('/posts', build);
-                
+                const data = await axios.post('/posts', build);
                 dispatch(clear);
-                navigate(`/FullPost/${build.title}`);
+                navigate(`/FullPost/${data.data._id}`);
             }; 
         } catch (error) {
             console.warn('Ошибка при создании статьи');

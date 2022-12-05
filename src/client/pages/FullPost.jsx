@@ -8,7 +8,7 @@ export const FullPost = () => {
     const [data, setData] = useState();
     const [isLoading, setLoading] = useState(true);
     useEffect(() => {
-      axios.get(`http://localhost:80/posts/${id}`).then(res => {
+      axios.get(`http://45.147.176.68:80/posts/${id}`).then(res => {
             setData(res.data);
 
             setLoading(false);
