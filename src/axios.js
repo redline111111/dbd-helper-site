@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:4444',
+    baseURL: 'http://localhost:80',
 })
 
 instance.interceptors.request.use((config) => {
@@ -9,6 +9,5 @@ instance.interceptors.request.use((config) => {
     return config;
 })
 
-axios.get('/posts');
 
 export default instance;

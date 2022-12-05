@@ -7,13 +7,8 @@ export const MainPage = () => {
             <div className="main__background">
                 <div className="main__buttons">
                     <Link to={'/KillersPerks'}>
-                        <button className="main__survivor">
-                            БИЛДЫ ВЫЖИВШИХ
-                        </button>
-                    </Link>
-                    <Link to={'/KillersPerks'}>
                         <button className="main__killer">
-                            БИЛДЫ УБИЙЦ
+                            ПРОСМОТРЕТЬ БИЛДЫ
                         </button>
                     </Link>
                     

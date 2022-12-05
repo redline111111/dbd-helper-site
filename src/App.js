@@ -6,15 +6,13 @@ import { FullPost } from './client/pages/FullPost.jsx';
 import { Login } from './client/pages/Login/index.jsx';
 import { AddPost } from './client/pages/AddPost/index.jsx';
 import { Registration } from './client/pages/Registration/index.jsx';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { useEffect } from 'react';
-import { selectIsAuth } from "./client/redux/slices/auth";
 import { fetchAuthMe } from './client/redux/slices/auth.js';
 import { Profile } from './client/pages/Profile/index.jsx';
 
 function App() {
   const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth);
 
   useEffect(()=>{
     dispatch(fetchAuthMe());
@@ -29,7 +27,7 @@ function App() {
         <Route path="/Login" element={<Login/>} /> 
         <Route path="/Registration" element={<Registration/>} /> 
         <Route path="/add-post" element={<AddPost/>} /> 
-        <Route path="/Profile" element={<Profile/>} /> 
+        <Route path="/Profile/:login" element={<Profile/>} /> 
         <Route path="/FullPost/:id" element={<FullPost/>} /> 
       </Routes>
     </>

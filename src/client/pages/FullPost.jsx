@@ -7,9 +7,8 @@ export const FullPost = () => {
     const {id} = useParams();
     const [data, setData] = useState();
     const [isLoading, setLoading] = useState(true);
-    console.log(data);
     useEffect(() => {
-      axios.get(`http://localhost:4444/posts/${id}`).then(res => {
+      axios.get(`http://localhost:80/posts/${id}`).then(res => {
             setData(res.data);
 
             setLoading(false);
@@ -29,6 +28,7 @@ export const FullPost = () => {
       return (
         <Post
         id = {data._id}
+        author = {data.author}
         title = {data.title}
         character = {data.character}
         user = {data.user}

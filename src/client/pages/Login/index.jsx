@@ -6,9 +6,10 @@ import { Navigate } from "react-router-dom";
 
 export const Login = () => {
     const isAuth = useSelector(selectIsAuth);
-
     const dispatch = useDispatch();
-    const {register, handleSubmit, setError} = useForm({
+
+
+    const {register, handleSubmit} = useForm({
         defaultValues: {
             login: '',
             password: ''
@@ -17,7 +18,7 @@ export const Login = () => {
 
     const onSubmit = async (values) => {
         const data = await dispatch(fetchUserData(values));
-
+        
         if(!data.payload){
            return alert ("Ошибка авторизации");
         }

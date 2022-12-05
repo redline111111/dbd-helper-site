@@ -7,10 +7,6 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
     return data;
 })
 
-// export const fetchImage = createAsyncThunk('posts/fetchImage', async (params) => {
-//     const {data} = await axios.get(`/uploads/${params}`);
-//     return data;
-// })
 
 const initialState = {
     posts: {
