@@ -7,7 +7,7 @@
 
 **Framework or rendering library:** React
 
-**Библиотеки и вспомогательные инструмены:** Redux Toolkit, axios, moment 
+**Библиотеки и вспомогательные инструмены:** Redux Toolkit, axios, moment, react-hook-form
 
 ## Для запуска на локальном сервере:
   1. Склонировать репозиторий
